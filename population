@@ -1,0 +1,21 @@
+import matplotlib.pyplot as plt
+
+# Hypothetical data
+initial_population = 2000000
+growth_factor = 1.036
+time = range(1990, 2041)  # 51 years (1990-2040)
+
+# Calculate population for each year
+population = [initial_population * growth_factor**(t - 1990) for t in time]
+
+# Plot the graph
+plt.figure(figsize=(10, 6))
+plt.plot(time, population, label='Population')
+plt.xlabel('Year')
+plt.ylabel('Population (Millions)')
+plt.title('Hypothetical Population Growth in Riyadh')
+plt.grid(True)
+plt.legend()
+
+# Show the graph
+plt.show()
